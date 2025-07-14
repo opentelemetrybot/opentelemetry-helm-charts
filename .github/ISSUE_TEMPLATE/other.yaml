@@ -1,0 +1,83 @@
+name: Other Issue
+description: Report any other issue or question about OpenTelemetry Helm Charts
+title: "[Other]: "
+labels: ["question", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue! Please provide as much detail as possible to help us understand and address your concern.
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue Type
+      description: What type of issue is this?
+      options:
+        - Documentation issue
+        - Configuration question
+        - Compatibility question
+        - Installation issue
+        - Performance issue
+        - Security concern
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: chart_name
+    attributes:
+      label: Chart Name (if applicable)
+      description: Which chart is this related to?
+      placeholder: e.g., opentelemetry-collector, opentelemetry-operator, opentelemetry-demo
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the issue or question.
+      placeholder: Please describe your issue or question in detail...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment (if applicable)
+      description: Please provide details about your environment
+      placeholder: |
+        - Kubernetes version: [e.g., 1.24.0]
+        - Helm version: [e.g., 3.10.0]
+        - Operating System: [e.g., Ubuntu 20.04]
+        - Platform: [e.g., EKS, GKE, minikube]
+
+  - type: textarea
+    id: steps_taken
+    attributes:
+      label: Steps Taken
+      description: What steps have you already taken to try to resolve this issue?
+      placeholder: |
+        1. I tried...
+        2. I checked...
+        3. I looked at...
+
+  - type: textarea
+    id: expected_outcome
+    attributes:
+      label: Expected Outcome
+      description: What outcome are you hoping for?
+      placeholder: I expected...
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any additional information you think may be relevant to this issue.
+
+  - type: dropdown
+    attributes:
+      label: Tip
+      description: This element is static, used to render a helpful sub-heading for end-users and community members to help prioritize issues. Please leave as is.
+      options:
+        - <sub>[React](https://github.blog/news-insights/product-news/add-reactions-to-pull-requests-issues-and-comments/) with 👍 to help prioritize this issue. Please use comments to provide useful context, avoiding `+1` or `me too`, to help us triage it. Learn more [here](https://opentelemetry.io/community/end-user/issue-participation/).</sub>
+      default: 0
